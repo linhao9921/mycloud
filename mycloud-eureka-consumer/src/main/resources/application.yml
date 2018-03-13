@@ -1,0 +1,11 @@
+server:
+  port: 8764
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://10.0.1.84:8761/eureka/
+
+spring:
+  application:
+    name: mycloud-eureka-consumer-ribbon

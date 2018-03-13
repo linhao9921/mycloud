@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.woasis</groupId>
+  <artifactId>mycloud</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>mycloud</name>
+  <url>http://maven.apache.org</url>
+  
+  <modules>
+    <module>mycloud-eureka-server</module>
+    <module>mycloud-eureka-producer</module>
+    <module>mycloud-eureka-consumer</module>
+    <module>mycloud-eureka-consumer2</module>
+  </modules>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <java.version>1.8</java.version>
+    <spring-boot.version>1.5.10.RELEASE</spring-boot.version>
+    <spring-boot-dependencies>1.5.10.RELEASE</spring-boot-dependencies>
+    <spring-cloud.version>1.5.2.RELEASE</spring-cloud.version>
+    <spring-cloud-eureka-server.version>1.4.3.RELEASE</spring-cloud-eureka-server.version>
+    <spring-cloud-eureka.version>1.4.3.RELEASE</spring-cloud-eureka.version>
+    <spring-cloud-dependencies>Camden.SR7</spring-cloud-dependencies>
+  </properties>
+  
+   <repositories>
+       <repository>
+            <id>central</id>
+            <name>Central Repository</name>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+       </repository>
+       <repository>
+           <id>spring-milestones</id>
+           <name>Spring Milestones</name>
+           <url>https://repo.spring.io/milestone</url>
+           <snapshots>
+               <enabled>false</enabled>
+           </snapshots>
+       </repository>
+   </repositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <!-- 支持 @ConfigurationProperties 注解 -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-configuration-processor</artifactId>
+        <optional>true</optional>  
+    </dependency>
+  </dependencies>
+  
+  <dependencyManagement>
+    <dependencies>
+        <!-- spring boot test-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>${spring-boot.version}</version>
+            <scope>test</scope>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+        
+        <!--spring-cloud-starter-eureka-server -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka-server</artifactId>
+            <version>${spring-cloud-eureka-server.version}</version>
+        </dependency>
+        
+        <!--spring-cloud-starter-eureka -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+            <version>${spring-cloud-eureka.version}</version>
+        </dependency>
+        
+        <!-- spring-cloud-dependencies -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-dependencies</artifactId>
+            <version>${spring-cloud-dependencies}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+        
+       <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-dependencies -->
+       <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>${spring-boot-dependencies}</version>
+        <type>pom</type>
+        <scope>import</scope>
+       </dependency>
+    </dependencies>
+  </dependencyManagement>
+  
+  <build>
+      <plugins>
+          <plugin>
+              <groupId>org.springframework.boot</groupId>
+              <artifactId>spring-boot-maven-plugin</artifactId>
+          </plugin>
+      </plugins>
+  </build>
+</project>
