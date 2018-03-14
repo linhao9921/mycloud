@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @version 创建时间：2018年3月13日 下午1:42:56
  * 说明：
  */
-@FeignClient(value="mycloud-eureka-producer")
+@FeignClient(value="mycloud-eureka-producer", fallback = TestServiceHiHystric.class)
 public interface TestService {
 
     /**
