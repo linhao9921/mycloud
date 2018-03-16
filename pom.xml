@@ -15,6 +15,9 @@
     <module>mycloud-eureka-producer</module>
     <module>mycloud-eureka-consumer</module>
     <module>mycloud-eureka-consumer2</module>
+    <module>mycloud-eureka-zuul</module>
+    <module>mycloud-config-sevice</module>
+    <module>mycloud-config-client</module>
   </modules>
 
   <properties>
