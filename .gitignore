@@ -2,3 +2,5 @@
 /.setting/
 /.idea/
 *.iml
+.classpath
+.project
