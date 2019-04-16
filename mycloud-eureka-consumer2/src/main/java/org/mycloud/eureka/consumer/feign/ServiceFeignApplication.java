@@ -9,7 +9,7 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 
 /**
- * @author 林浩<hao.lin@w-oasis.com>
+ * @author 林浩
  * @version 创建时间：2018年3月13日 下午1:41:09
  * 说明：Feign负载均衡<br/>
  * 说明：(Eureka 消费者-类似dubbo的consumer的功能)

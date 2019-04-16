@@ -3,7 +3,7 @@ package org.mycloud.eureka.consumer.feign;
 import org.springframework.stereotype.Component;
 
 /**
- * @author 林浩<hao.lin@w-oasis.com>
+ * @author 林浩
  * @version 创建时间：2018年3月14日 上午10:15:43
  * 说明：断路器
  */

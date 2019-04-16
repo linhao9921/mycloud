@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author 林浩<hao.lin@w-oasis.com>
+ * @author 林浩
  * @version 创建时间：2018年3月12日 下午4:23:31
  * 说明：(Eureka 生产者-类似dubbo的producer的功能)
  */

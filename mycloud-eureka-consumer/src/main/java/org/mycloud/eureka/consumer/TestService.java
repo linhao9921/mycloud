@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 /**
- * @author 林浩<hao.lin@w-oasis.com>
+ * @author 林浩
  * @version 创建时间：2018年3月13日 上午10:43:42
  * 说明：测试服务类
  */

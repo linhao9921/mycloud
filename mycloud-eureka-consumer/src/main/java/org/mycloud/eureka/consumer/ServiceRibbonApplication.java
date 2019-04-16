@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @author 林浩<hao.lin@w-oasis.com>
+ * @author 林浩
  * @version 创建时间：2018年3月13日 上午10:35:30
  * 说明：Ribbon负载均衡<br/>
  * 说明：(Eureka 消费者-类似dubbo的consumer的功能)
